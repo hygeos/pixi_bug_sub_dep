@@ -1,0 +1,20 @@
+[project]
+authors = [{name = "Joackim Orcière", email = "joackim.orciere@hygeos.com"}]
+dependencies = [
+    "tqdm @ git+https://github.com/tqdm/tqdm.git",
+]
+
+version = "0.1.0"
+name = "pixi_bug_sub_dep"
+requires-python = ">= 3.11"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pixi_bug_sub_dep"]  # Explicitly specify your package
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
